@@ -1,0 +1,68 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 1 0 0 4.71238898038469
+  position 5.019609279525073e-16 2.583578340664526 -7.887957439253686e-16
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 -0.04
+  floorSize 2 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 6733.833706401648
+  hidden position_0_1 6181.922743501163
+  hidden linearVelocity_0 0.02738680733025903 3.174850490146483e-07 -0.015513107306747806
+  hidden angularVelocity_0 -0.0025072872773047056 7.5539228196795835e-06 -0.004392550026977199
+  hidden rotation_1 0.9999999999999999 0 0 1.7409428948689436
+  hidden linearVelocity_1 0.027409280025330898 -2.636936510036485e-07 -0.015525769464177207
+  hidden angularVelocity_1 -0.7762953638042471 -1.465258470579764e-05 -1.3704642917371737
+  hidden rotation_2 0.9999999999999999 0 0 0.7315987635505078
+  hidden linearVelocity_2 0.02740921978994362 1.5573817231384487e-07 -0.015526159856578882
+  hidden angularVelocity_2 -0.7763012518267601 2.6688196953695607e-05 -1.3704609631876472
+  translation -0.18950755558977048 -6.401638025084651e-05 0.17832451626441717
+  rotation -0.0010364167037692198 0.9999992798872906 -0.0006050333183799388 -1.0554227655776822
+  controller "my_linefollower"
+  controllerArgs [
+    ""
+  ]
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.02 0
+      name "ir1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      name "ir0"
+      type "infra-red"
+    }
+  ]
+}
+TrackOne {
+  translation 0 -0.0075 0
+}
